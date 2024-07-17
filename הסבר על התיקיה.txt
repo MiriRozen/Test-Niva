@@ -4,6 +4,7 @@
 
 תשובה לחלק א'
 נמצאת בקובץ בשם - SQL
+ובתמונה : "קשרים בין הטבלאות חלק א'"
 
 ותשובה לחלק ב'
 נמצאת ב: Test-Niva- Miri\Dotnet\Northwind\ViewsShowProducts
