@@ -1,0 +1,259 @@
+07/11/2023 21:25:39 - >> ERROR >> System.Data.SqlClient.SqlException - Login failed for user 'nvausr18'.
+External error code: -2146232060
+Entity: Customers (dbo.Customers), Northwind.Models.Customers
+
+
+Short Callstack:
+
+   at Northwind.Customers.ShowCustomers.Run(TextParameter ppi_CustomerID) in d:\northwindTraining\CustomerMigration\Dotnet\Northwind.Customers\ShowCustomers.cs:line 42
+   at Northwind.Views.ApplicationMdiMenu.<.ctor>b__0_0() in \\Shekelgs\Users Documents\shoshanakr\My Documents\Niva test\Dotnet\Northwind\Views\ApplicationMdiMenu.cs:line 80
+   at Northwind.ApplicationCore.Execute() in \\Shekelgs\Users Documents\shoshanakr\My Documents\Niva test\Dotnet\Northwind\ApplicationCore.cs:line 37
+   at Northwind.Views.ApplicationMdi.WndProc(Message& m) in \\Shekelgs\Users Documents\shoshanakr\My Documents\Niva test\Dotnet\Northwind\Views\ApplicationMdi.cs:line 27
+   at Northwind.ApplicationCore.Run() in \\Shekelgs\Users Documents\shoshanakr\My Documents\Niva test\Dotnet\Northwind\ApplicationCore.cs:line 27
+   at Northwind.Program.Main(String[] args) in \\Shekelgs\Users Documents\shoshanakr\My Documents\Niva test\Dotnet\Northwind\Program.cs:line 12
+
+Callstack:
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at ENV.Utilities.Profiler.ProfiledConnection.Open()
+   at ENV.Data.DataProvider.ConnectionManager.DecorateConnection(IDbConnection connection)
+   at ENV.Data.DataProvider.ConnectionManager.<>c__DisplayClass31_1.<AddDatabase>b__4()
+
+Last Menu Path: 
+1) Programs
+2) Customers
+
+Application Callstack:
+Show Customers (P#3) - Northwind.Customers.ShowCustomers
+
+Open database connections:
+NORTHWIND - NORTHWIND Datasource=nivatstdb;Catalog=Northwind;User=nvausr18
+
+Northwind Version: 4.6.0.33985
+Firefly Version: 4.6.0.33985
+
+
+17/07/2024 18:56:07 - >> ERROR >> System.Data.SqlClient.SqlException - An expression of non-boolean type specified in a context where a condition is expected, near 'Order'.
+Statement(s) could not be prepared.
+External error code: -2146232060
+Entity: Products (dbo.Products), Northwind.Models.Products
+
+SQL:
+sp_cursorprepexec
+
+Parameter Info:
+declare @handle int = 'null'
+declare @cursor int = 0
+declare @paramdef nvarchar(14) = '@0 nvarchar(1)'
+declare @stmt nvarchar(201) = 'Select ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued 
+From dbo.Products 
+Where (dbo.Products) 
+Order by ProductID'
+declare @scrollopt int = 135170 /*21002*/
+declare @ccopt int = 98305 /*18001*/
+declare @rowcount int = 0
+declare @0 nvarchar(1) = 'C'
+
+
+
+
+Short Callstack:
+
+   ?-  Northwind.ViewsShowProducts.ShowProducts.Run() ?- C:\Users\????\Desktop\Dotnet\Northwind\ViewsShowProducts\ShowProducts.cs:???? 22
+   ?-  Northwind.Views.ApplicationMdi.testToolStripMenuItem_Click(Object sender, EventArgs e) ?- C:\Users\????\Desktop\Dotnet\Northwind\Views\ApplicationMdi.cs:???? 55
+   ?-  Northwind.ApplicationCore.Execute() ?- C:\Users\????\Desktop\Dotnet\Northwind\ApplicationCore.cs:???? 37
+   ?-  Northwind.Views.ApplicationMdi.WndProc(Message& m) ?- C:\Users\????\Desktop\Dotnet\Northwind\Views\ApplicationMdi.cs:???? 27
+   ?-  Northwind.ApplicationCore.Run() ?- C:\Users\????\Desktop\Dotnet\Northwind\ApplicationCore.cs:???? 27
+   ?-  Northwind.Program.Main(String[] args) ?- C:\Users\????\Desktop\Dotnet\Northwind\Program.cs:???? 12
+
+Callstack:
+   ?-  System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ?-  System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ?-  System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ?-  System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ?-  System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   ?-  System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   ?-  System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ?-  System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ?-  System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   ?-  ENV.Data.DataProvider.SQLClientEntityDataProvider.ServerSideCursorEntitySelectReader.Execute(Boolean autoFetch, IDbCommand c, IDataParameter rowcount)
+   ?-  ENV.Data.DataProvider.SQLClientEntityDataProvider.ServerSideCursorEntitySelectReader..ctor(IDbCommand command, Boolean optimizeForFirstRows, SQLDataProviderHelper helper, IEnumerable`1 selectedColumns, ColumnInSelect[] columnsIndexes, Entity entity, Boolean disableCache, Boolean queryLocksAllRows, String entityName, SQLClientEntityDataProvider parent)
+   ?-  ENV.Data.DataProvider.SQLClientEntityDataProvider.ENV.Data.DataProvider.SQLDataProviderHelperClient.Execute(ExecuteReaderHelper helper, Boolean optimizeForFirstRows, IEnumerable`1 selectedColumns, Entity entity, Boolean disableCache, Boolean lockAllRows, String entityName)
+   ?-  ENV.Data.DataProvider.SQLDataProviderHelper.SQLSelectCommand.ExecuteReader(Boolean optimizeForFirstRows, Boolean lockAllRows)
+
+Application Callstack:
+ShowProducts - Northwind.ViewsShowProducts.ShowProducts
+
+Open database connections:
+NORTHWIND - NORTHWIND Datasource=DESKTOP-2T6KDMT;Catalog=Northwind;User=test
+
+Northwind Version: 4.6.0.33985
+Firefly Version: 4.6.0.33985
+
+
+17/07/2024 18:57:11 - >> ERROR >> System.Data.SqlClient.SqlException - An expression of non-boolean type specified in a context where a condition is expected, near 'Order'.
+Statement(s) could not be prepared.
+External error code: -2146232060
+Entity: Products (dbo.Products), Northwind.Models.Products
+
+SQL:
+sp_cursorprepexec
+
+Parameter Info:
+declare @handle int = 'null'
+declare @cursor int = 0
+declare @paramdef nvarchar(14) = '@0 nvarchar(1)'
+declare @stmt nvarchar(201) = 'Select ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued 
+From dbo.Products 
+Where (dbo.Products) 
+Order by ProductID'
+declare @scrollopt int = 135170 /*21002*/
+declare @ccopt int = 98305 /*18001*/
+declare @rowcount int = 0
+declare @0 nvarchar(1) = 'C'
+
+
+
+
+Short Callstack:
+
+   ?-  Northwind.ViewsShowProducts.ShowProducts.Run() ?- C:\Users\????\Desktop\Dotnet\Northwind\ViewsShowProducts\ShowProducts.cs:???? 22
+   ?-  Northwind.Views.ApplicationMdi.testToolStripMenuItem_Click(Object sender, EventArgs e) ?- C:\Users\????\Desktop\Dotnet\Northwind\Views\ApplicationMdi.cs:???? 55
+   ?-  Northwind.ApplicationCore.Execute() ?- C:\Users\????\Desktop\Dotnet\Northwind\ApplicationCore.cs:???? 37
+   ?-  Northwind.Views.ApplicationMdi.WndProc(Message& m) ?- C:\Users\????\Desktop\Dotnet\Northwind\Views\ApplicationMdi.cs:???? 27
+   ?-  Northwind.ApplicationCore.Run() ?- C:\Users\????\Desktop\Dotnet\Northwind\ApplicationCore.cs:???? 27
+   ?-  Northwind.Program.Main(String[] args) ?- C:\Users\????\Desktop\Dotnet\Northwind\Program.cs:???? 12
+
+Callstack:
+   ?-  System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ?-  System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ?-  System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ?-  System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ?-  System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   ?-  System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   ?-  System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ?-  System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ?-  System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   ?-  ENV.Data.DataProvider.SQLClientEntityDataProvider.ServerSideCursorEntitySelectReader.Execute(Boolean autoFetch, IDbCommand c, IDataParameter rowcount)
+   ?-  ENV.Data.DataProvider.SQLClientEntityDataProvider.ServerSideCursorEntitySelectReader..ctor(IDbCommand command, Boolean optimizeForFirstRows, SQLDataProviderHelper helper, IEnumerable`1 selectedColumns, ColumnInSelect[] columnsIndexes, Entity entity, Boolean disableCache, Boolean queryLocksAllRows, String entityName, SQLClientEntityDataProvider parent)
+   ?-  ENV.Data.DataProvider.SQLClientEntityDataProvider.ENV.Data.DataProvider.SQLDataProviderHelperClient.Execute(ExecuteReaderHelper helper, Boolean optimizeForFirstRows, IEnumerable`1 selectedColumns, Entity entity, Boolean disableCache, Boolean lockAllRows, String entityName)
+   ?-  ENV.Data.DataProvider.SQLDataProviderHelper.SQLSelectCommand.ExecuteReader(Boolean optimizeForFirstRows, Boolean lockAllRows)
+
+Application Callstack:
+ShowProducts - Northwind.ViewsShowProducts.ShowProducts
+
+Open database connections:
+NORTHWIND - NORTHWIND Datasource=DESKTOP-2T6KDMT;Catalog=Northwind;User=test
+
+Northwind Version: 4.6.0.33985
+Firefly Version: 4.6.0.33985
+
+
+17/07/2024 19:09:24 - >> ERROR >> System.Data.SqlClient.SqlException - An expression of non-boolean type specified in a context where a condition is expected, near 'Order'.
+Statement(s) could not be prepared.
+External error code: -2146232060
+Entity: Products (dbo.Products), Northwind.Models.Products
+
+SQL:
+sp_cursorprepexec
+
+Parameter Info:
+declare @handle int = 'null'
+declare @cursor int = 0
+declare @stmt nvarchar(194) = 'Select ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued 
+From dbo.Products 
+Where (False) 
+Order by ProductID'
+declare @scrollopt int = 131074 /*20002*/
+declare @ccopt int = 98305 /*18001*/
+declare @rowcount int = 0
+
+
+
+
+Short Callstack:
+
+   ?-  Northwind.ViewsShowProducts.ShowProducts.Run() ?- C:\Users\????\Desktop\Dotnet\Northwind\ViewsShowProducts\ShowProducts.cs:???? 22
+   ?-  Northwind.Views.ApplicationMdi.testToolStripMenuItem_Click(Object sender, EventArgs e) ?- C:\Users\????\Desktop\Dotnet\Northwind\Views\ApplicationMdi.cs:???? 55
+   ?-  Northwind.ApplicationCore.Execute() ?- C:\Users\????\Desktop\Dotnet\Northwind\ApplicationCore.cs:???? 37
+   ?-  Northwind.Views.ApplicationMdi.WndProc(Message& m) ?- C:\Users\????\Desktop\Dotnet\Northwind\Views\ApplicationMdi.cs:???? 27
+   ?-  Northwind.ApplicationCore.Run() ?- C:\Users\????\Desktop\Dotnet\Northwind\ApplicationCore.cs:???? 27
+   ?-  Northwind.Program.Main(String[] args) ?- C:\Users\????\Desktop\Dotnet\Northwind\Program.cs:???? 12
+
+Callstack:
+   ?-  System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ?-  System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ?-  System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ?-  System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ?-  System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   ?-  System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   ?-  System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ?-  System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   ?-  System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   ?-  ENV.Data.DataProvider.SQLClientEntityDataProvider.ServerSideCursorEntitySelectReader.Execute(Boolean autoFetch, IDbCommand c, IDataParameter rowcount)
+   ?-  ENV.Data.DataProvider.SQLClientEntityDataProvider.ServerSideCursorEntitySelectReader..ctor(IDbCommand command, Boolean optimizeForFirstRows, SQLDataProviderHelper helper, IEnumerable`1 selectedColumns, ColumnInSelect[] columnsIndexes, Entity entity, Boolean disableCache, Boolean queryLocksAllRows, String entityName, SQLClientEntityDataProvider parent)
+   ?-  ENV.Data.DataProvider.SQLClientEntityDataProvider.ENV.Data.DataProvider.SQLDataProviderHelperClient.Execute(ExecuteReaderHelper helper, Boolean optimizeForFirstRows, IEnumerable`1 selectedColumns, Entity entity, Boolean disableCache, Boolean lockAllRows, String entityName)
+   ?-  ENV.Data.DataProvider.SQLDataProviderHelper.SQLSelectCommand.ExecuteReader(Boolean optimizeForFirstRows, Boolean lockAllRows)
+
+Application Callstack:
+ShowProducts - Northwind.ViewsShowProducts.ShowProducts
+
+Open database connections:
+NORTHWIND - NORTHWIND Datasource=DESKTOP-2T6KDMT;Catalog=Northwind;User=test
+
+Northwind Version: 4.6.0.33985
+Firefly Version: 4.6.0.33985
+
+
+17/07/2024 21:48:46 - >> ERROR >> System.Data.SqlClient.SqlException - ????? ????? ?????? ???? ?? ????? ??????? ????? ????? ????? ????? ?- SQL Server. ???? ?? ???? ?? ????? ????. ??? ??? ????? ???? ??- SQL Server ????? ????? ??????? ?????. (provider: Named Pipes Provider, error: 40 - ?? ????? ?????? ????? ????? ?- SQL Server)
+External error code: -2146232060
+Entity: Products (dbo.Products), Northwind.Models.Products
+
+
+Short Callstack:
+
+   ?-  Northwind.ViewsShowProducts.ShowProducts.Run() ?- C:\Users\????\Desktop\Test-Niva- Miri\Dotnet\Northwind\ViewsShowProducts\ShowProducts.cs:???? 22
+   ?-  Northwind.Views.ApplicationMdi.testToolStripMenuItem_Click(Object sender, EventArgs e) ?- C:\Users\????\Desktop\Test-Niva- Miri\Dotnet\Northwind\Views\ApplicationMdi.cs:???? 55
+   ?-  Northwind.ApplicationCore.Execute() ?- C:\Users\????\Desktop\Test-Niva- Miri\Dotnet\Northwind\ApplicationCore.cs:???? 37
+   ?-  Northwind.Views.ApplicationMdi.WndProc(Message& m) ?- C:\Users\????\Desktop\Test-Niva- Miri\Dotnet\Northwind\Views\ApplicationMdi.cs:???? 27
+   ?-  Northwind.ApplicationCore.Run() ?- C:\Users\????\Desktop\Test-Niva- Miri\Dotnet\Northwind\ApplicationCore.cs:???? 27
+   ?-  Northwind.Program.Main(String[] args) ?- C:\Users\????\Desktop\Test-Niva- Miri\Dotnet\Northwind\Program.cs:???? 12
+Inner Error : System.ComponentModel.Win32Exception - The network path was not found
+External error code: -2147467259
+Inner Trace : 
+
+
+Callstack:
+   ?-  System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   ?-  System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   ?-  System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   ?-  System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ?-  System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ?-  System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ?-  System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ?-  System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ?-  System.Data.SqlClient.SqlConnection.Open()
+   ?-  ENV.Utilities.Profiler.ProfiledConnection.Open()
+   ?-  ENV.Data.DataProvider.ConnectionManager.DecorateConnection(IDbConnection connection)
+   ?-  ENV.Data.DataProvider.ConnectionManager.<>c__DisplayClass31_1.<AddDatabase>b__4()
+Inner Error : The network path was not found
+Inner Trace : 
+
+
+Application Callstack:
+ShowProducts - Northwind.ViewsShowProducts.ShowProducts
+
+Open database connections:
+NORTHWIND - NORTHWIND Datasource=server;Catalog=Northwind;User=userName
+
+Northwind Version: 4.6.0.33985
+Firefly Version: 4.6.0.33985
+
+

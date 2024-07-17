@@ -1,0 +1,16 @@
+d:\northwindTraining\CustomerMigration\Dotnet\bin\NorthwindInterfaces.xml
+d:\northwindTraining\CustomerMigration\Dotnet\bin\NorthwindInterfaces.dll
+d:\northwindTraining\CustomerMigration\Dotnet\bin\NorthwindInterfaces.pdb
+d:\northwindTraining\CustomerMigration\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.csprojAssemblyReference.cache
+d:\northwindTraining\CustomerMigration\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.csproj.CoreCompileInputs.cache
+d:\northwindTraining\CustomerMigration\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.csproj.CopyComplete
+d:\northwindTraining\CustomerMigration\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.dll
+d:\northwindTraining\CustomerMigration\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.pdb
+C:\Users\מירי\Desktop\Test-Niva- Miri\Dotnet\bin\NorthwindInterfaces.xml
+C:\Users\מירי\Desktop\Test-Niva- Miri\Dotnet\bin\NorthwindInterfaces.dll
+C:\Users\מירי\Desktop\Test-Niva- Miri\Dotnet\bin\NorthwindInterfaces.pdb
+C:\Users\מירי\Desktop\Test-Niva- Miri\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.csProj.AssemblyReference.cache
+C:\Users\מירי\Desktop\Test-Niva- Miri\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.csProj.CoreCompileInputs.cache
+C:\Users\מירי\Desktop\Test-Niva- Miri\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.csProj.CopyComplete
+C:\Users\מירי\Desktop\Test-Niva- Miri\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.dll
+C:\Users\מירי\Desktop\Test-Niva- Miri\Dotnet\NorthwindInterfaces\obj\Debug\NorthwindInterfaces.pdb
